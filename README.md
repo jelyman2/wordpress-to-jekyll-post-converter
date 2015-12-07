@@ -6,6 +6,9 @@ into `.md` (markdown) files for use in Jekyll blogs.
 I build this out of necessity since the Jekyll export plugin for WordPress hasn't worked in many months and I 
 couldn't find any easy to use pre-built tools out on the interwebs.
 
+The code is clunky, I'll admit, but it did what I needed it to do and it processed 252 posts in less than 10 seconds.
+ Not bad for a couple hours work, if you ask me.
+
 ## Requirements
 
 - A WordPress.org installation
@@ -27,3 +30,6 @@ couldn't find any easy to use pre-built tools out on the interwebs.
 - Take Author Argument
 - Get author dynamically via the API
 - rspec tests
+- Catch HTTP errors
+- Verbosity argument
+- MAJOR REFACTORING

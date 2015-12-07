@@ -6,24 +6,29 @@ require 'net/http'
 require 'uri'
 require 'reverse_markdown'
 
+time_start = Time.now
 
 # Change these variables to suit your installation and needs.
 
-wordpress_url = 'http://YOUR_SITE_URL/wp-json/wp/v2/posts?per_page=1000'
-the_post_author = 'YOUR_NAME'
-the_post_category = 'POST_CATEGORY'
+wordpress_url = 'https://johnathanlyman.com/wp-json/wp/v2/posts?per_page=1000'
+the_post_author = 'Johnathan Lyman'
+the_post_category = 'Blog'
 
 
 def url_open(url)
   Net::HTTP.get(URI.parse(url))
 end
 
+puts "Accessing URL: #{wordpress_url}"
 page_content = url_open(wordpress_url)
+
+puts 'Converting to JSON'
 the_posts = JSON.parse(page_content)
 
-puts 'Generating jekyll post files...'
+puts "Generating #{the_posts.count} jekyll post files..."
 
 count = 0
+
 
 # Processing the posts
 the_posts.each do |post|
@@ -103,4 +108,5 @@ the_posts.each do |post|
   count += 1
 end
 
-puts "Done. #{count} post(s) generated."
+time_end = Time.now
+puts "Done. #{count} post(s) generated in #{time_end - time_start} seconds."
