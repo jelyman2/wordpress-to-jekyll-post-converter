@@ -1,0 +1,18 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    mini_portile2 (2.0.0)
+    nokogiri (1.6.7)
+      mini_portile2 (~> 2.0.0.rc2)
+    reverse_markdown (1.0.0)
+      nokogiri
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  nokogiri
+  reverse_markdown
+
+BUNDLED WITH
+   1.10.6
