@@ -1,5 +1,7 @@
 # WordPress to Jekyll Markdown
 
+By [Johanthan Lyman](http://github.com/jelyman2)
+
 This rather simple Ruby script pings the REST API on a self-hosted WordPress site, gets post data, and converts it 
 into `.md` (markdown) files for use in Jekyll blogs.
 
@@ -33,3 +35,7 @@ The code is clunky, I'll admit, but it did what I needed it to do and it process
 - Catch HTTP errors
 - Verbosity argument
 - MAJOR REFACTORING
+
+## LICENSE
+
+This code is covered under the MIT License.
